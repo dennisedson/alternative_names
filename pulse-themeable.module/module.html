@@ -1,0 +1,82 @@
+<!-- module html  -->
+<!-- module html  -->
+<div class="pulse-container">
+  <h2 style="font-family: {{ module.component_style.font_field.font }}">{{ module.heading_text }}</h2>
+ 
+  <div class="blobs-container">
+    <div class="blob first"></div>
+    <div class="blob second"></div>
+  </div>
+</div>
+
+{% require_css %}
+  
+<style>
+  .pulse-container{
+    border: 10px solid {{ module.component_style.first_color.color }};
+    border-radius: 35px
+  }
+  h2 {
+    color: {{ module.component_style.first_color.color }}
+  }
+
+  .blobs-container {
+    display: flex;
+  }
+
+  .blob {
+    border-radius: 50%;
+    margin: 10px;
+    height: 20px;
+    width: 20px;
+    transform: scale(1);
+
+  }
+
+  .blob.first {
+    background: {{ module.component_style.first_color.rgba }};
+    box-shadow: 0 0 0 0 {{ module.component_style.first_color.rgba }};
+    animation: pulse-first 2s infinite;
+  }
+
+  @keyframes pulse-first {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba({{ module.component_style.first_color.rgb }}, 0.7);
+    }
+
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba({{ module.component_style.first_color.rgb }}, 0);
+    }
+  }
+
+  .blob.second {
+    background: {{ module.component_style.second_color.rgba }};
+    box-shadow: 0 0 0 0 {{ module.component_style.second_color.rgba }};
+    animation: pulse-second 2s infinite;
+  }
+
+  @keyframes pulse-second {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba({{ module.component_style.second_color.rgb }}, 0.7);
+    }
+
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba({{ module.component_style.second_color.rgb }}, 0);
+    }
+  }
+</style>
+{% end_require_css %}

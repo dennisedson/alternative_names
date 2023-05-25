@@ -1,0 +1,106 @@
+[
+  {
+    "allow_new_line": false,
+    "default": "Themeable",
+    "display_width": null,
+    "id": "665d126e-0c1c-ac0b-6880-345c00098a23",
+    "label": "Heading Text",
+    "locked": false,
+    "name": "heading_text",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
+  },
+  {
+    "children": [
+      {
+        "default": {
+          "styles": {},
+          "variant": "regular",
+          "font": "Comic Neue",
+          "fallback": "cursive",
+          "font_set": "GOOGLE",
+          "color": "#E06666"
+        },
+        "display_width": null,
+        "id": "b9116270-123e-1473-2e76-b7913f675314",
+        "label": "Font",
+        "load_external_fonts": true,
+        "locked": false,
+        "name": "font_field",
+        "required": false,
+        "type": "font",
+        "inherited_value": {
+          "default_value_path": "theme.heading_font"
+        }
+      },
+      {
+        "default": {
+          "color": "#F4CCCC",
+          "opacity": 100
+        },
+        "display_width": null,
+        "id": "7d78dcc7-41ae-87e9-2949-1ba49eaa5225",
+        "label": "first Color",
+        "locked": false,
+        "name": "first_color",
+        "required": false,
+        "type": "color",
+        "inherited_value": {
+          "default_value_path": "theme.primary_color",
+          "property_value_paths": {
+            "color": "theme.primary_color.color",
+            "opacity": "theme.primary_color.opacity"
+          }
+        }
+      },
+      {
+        "default": {
+          "color": "#76A5AF",
+          "opacity": 100
+        },
+        "display_width": null,
+        "label": "Second Color",
+        "locked": false,
+        "name": "second_color",
+        "required": false,
+        "type": "color",
+        "inherited_value": {
+          "default_value_path": "theme.secondary_color",
+          "property_value_paths": {
+            "color": "theme.secondary_color.color",
+            "opacity": "theme.secondary_color.opacity"
+          }
+        }
+      }
+    ],
+    "default": {
+      "font_field": {
+        "styles": {},
+        "variant": "regular",
+        "font": "Comic Neue",
+        "fallback": "cursive",
+        "font_set": "GOOGLE",
+        "color": "#E06666"
+      },
+      "first_color": {
+        "color": "#F4CCCC",
+        "opacity": 100
+      },
+      "second_color": {
+        "color": "#76A5AF",
+        "opacity": 100
+      }
+    },
+    "display_width": null,
+    "expanded": false,
+    "id": "19166bdf-f25a-8e9d-ffa3-08d9fd9a6010",
+    "label": "Component Styles",
+    "locked": false,
+    "name": "component_style",
+    "required": false,
+    "tab": "STYLE",
+    "type": "group"
+  }
+]

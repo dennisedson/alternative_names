@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+* {
+	box-sizing: border-box;
+}
+
+.pulse-container {
+  background-color: #e8e8e8;
+	font-family: 'Source Sans Pro', sans-serif;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+  padding: 3rem
+}
+
+.blobs-container {
+	display: flex;
+}
